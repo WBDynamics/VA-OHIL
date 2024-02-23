@@ -30,7 +30,8 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
-          **/assets/sass/**
+          **/assets/**
+          **/assets-3-5/sass/**
           **/uswds/img/material-icons-deprecated/**
           **/uswds/img/material-icons/*
   lighthouse:
