@@ -138,3 +138,29 @@ a.vcl-button .vcl-logo {
  display: none;
     width: 15px
 }
+
+// expand more overrides
+@media all and (min-width:64em){
+	.usa-nav__primary button[aria-expanded=false] span::after{
+		background-image:url(none) !important;
+	}
+	@supports ((-webkit-mask:url()) or (mask:url())){
+		.usa-nav__primary button[aria-expanded=false] span::after{
+			-webkit-mask-image:url(none),linear-gradient(transparent,transparent) !important;
+			mask-image:url(none),linear-gradient(transparent,transparent) !important;
+		}
+	}
+}
+
+// expand less overrides
+@media all and (min-width:64em) and (min-width:64em){
+	.usa-nav__primary button[aria-expanded=true] span::after{
+		background-image:url(none) !important;
+	}
+	@supports ((-webkit-mask:url()) or (mask:url())){
+		.usa-nav__primary button[aria-expanded=true] span::after{
+			-webkit-mask-image:url(none),linear-gradient(transparent,transparent) !important;
+			mask-image:url(none),linear-gradient(transparent,transparent) !important;
+		}
+	}
+}
