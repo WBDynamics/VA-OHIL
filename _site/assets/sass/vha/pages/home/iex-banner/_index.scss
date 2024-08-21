@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
 
 .iex-banner {
-    margin-top: -150px;
+    margin-top: -7.5rem;
     
     a {
         color: #00bde3;
@@ -17,6 +17,34 @@
         border: 1px solid var(--Accent-cool-accent-cool-darker, #07648D);
         background: #122E50;
         box-shadow: 0px 12px 36px 0px rgba(0, 0, 0, 0.25);
+
+        // @include at-media(mobile) {
+        //     padding: 5rem 0;
+        // }
+
+        // @include at-media(mobile-lg) {
+        //     padding: 5rem 0;
+        // }
+
+        // @include at-media(tablet) {
+        //     padding: 5rem 0;
+        // }
+
+        // @include at-media(tablet-lg) {
+        //     padding: 5rem 0;
+        // }
+        
+        // @include at-media(desktop) {
+        //     padding: 0;
+        // }
+        
+        // @include at-media(desktop-lg) {
+        //     padding: 0;
+        // }
+        
+        // @include at-media(widescreen) {
+        //     padding: 0;
+        // }
     }
 
     &__content {
@@ -66,31 +94,47 @@
             right: 0;
         }
 
-    }    
+    }
     
-    .title {
-        position: relative;
-        height: 100px;
-
-        .title-1 {
-            border: 1px solid red;
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size:  70px;
-            line-height: 1;
+    @include at-media(mobile) {
+        .banner-text {
+            padding: 2rem 0;
         }
-
-        .title-2 {
-            border: 1px solid teal;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            display: inline-block;
-            font-size: 30px;
-            margin-left: 6px;
-            line-height: 1;
+    }
+    
+    @include at-media(mobile-lg) {
+        .banner-text {
+            padding: 2rem 0;
         }
-    }   
+    }
+    
+    @include at-media(tablet) {
+        .banner-text {
+            padding: 3rem 0;
+        }
+    }
+    
+    @include at-media(tablet-lg) {
+        .banner-text {
+            padding: 3rem 0;
+        }
+    }
+    
+    @include at-media(desktop) {
+        .banner-text {
+            padding: 0;
+        }
+    }
+    
+    @include at-media(desktop-lg) {
+        .banner-text {
+            padding: 0;
+        }
+    }
+    
+    @include at-media(widescreen) {
+        .banner-text {
+            padding: 0;
+        }
+    }  
 }
